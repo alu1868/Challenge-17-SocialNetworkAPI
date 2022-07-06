@@ -1,0 +1,24 @@
+{
+  "name": "challenge-18-socialnetworkapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alu1868/Challenge-18-SocialNetworkAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alu1868/Challenge-18-SocialNetworkAPI/issues"
+  },
+  "homepage": "https://github.com/alu1868/Challenge-18-SocialNetworkAPI#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5"
+  }
+}
