@@ -115,4 +115,4 @@ const thoughtController = {
     }
 }
 
-modeul.exports = thoughtController
+module.exports = thoughtController

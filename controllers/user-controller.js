@@ -27,7 +27,9 @@ const userController = {
     },
 
     deleteFriend() {
-        
+
     }
 
 }
+
+module.exports = userController
