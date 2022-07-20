@@ -9,19 +9,19 @@ const {
     deleteUser,
     addFriend,
     deleteFriend,
-} = userController
+} = userController;
 
 router.route('/')
     .get(getAllUsers)
-    .post(createUser)
+    .post(createUser);
 
 router.route('/:id')
     .get(getUserById)
     .put(updateUser)
-    .delete(deleteFriend)
+    .delete(deleteUser);
 
 router.route('/:id/friends/:friendsId')
     .post(addFriend)
-    .delete(deleteFriend)
+    .delete(deleteFriend);
 
 module.exports = router;
