@@ -3,22 +3,19 @@
 
   ## Table of Contents
   1. [Description](#Description)
-  2. [Installation Instructions](#Installation)
-  3. [Usage Instructions](#Usage)
-  4. [License](#License)
-  5. [Contributors](#Contributors)
-  6. [Questions](#Questions)
-  7. [User-Story](#User-Story)
-  8. [Acceptance-Criteria](#Acceptance-Criteria)
+  2. [Installation/Usage Instructions](#Installation/Usage)
+  3. [License](#License)
+  4. [Contributors](#Contributors)
+  5. [Questions](#Questions)
+  6. [User-Story](#User-Story)
+  7. [Acceptance-Criteria](#Acceptance-Criteria)
 
   ## Description
-  1
+  A API built for social networks, allows for the creation/updating/and deletion of users, the ability to add and delete friends, make thoughts, and add reactions to those thoughts
 
-  ## Installation
-  1
-
-  ## Usage
-  Link to demo walkthrough: 
+  ## Installation/Usage
+  ensure you are in the correct directory and do a 'npm install'. then do a 'npm start' to start the server
+  Link to demo walkthrough: https://drive.google.com/file/d/19VInPmtSm3HTFVolfLz597svHtDhm3bO/view?usp=sharing
 
   ## License
   Copyright (C) function getFullYear() { [native code] }
