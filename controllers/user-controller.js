@@ -69,11 +69,7 @@ const userController = {
     },
 
     addFriend({ params }, res) {
-        User.findOneAndUpdate(
-            { _id: params.thoughtId },
-            { $pull: { friends: params.friendId } },
-            { new: true, runValidators: true}
-        )
+        User.findOneAndUpdate({ _id: params.id },{ $push: { friends: params.friendId } },{ new: true, runValidators: true})
         .then (dbUsers => {
             if (!dbUsers) {
                 res.status(404).json({ message: 'no users with that ID found'})
