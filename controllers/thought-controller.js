@@ -30,7 +30,7 @@ const thoughtController = {
     },
 
     createThought({ params, body }, res) {
-        Thoughts.create(body)
+        Thought.create(body)
             .then(({ _id }) => {
                 return User.findOneandUpdate(
                     { _id: params.userId},
@@ -65,7 +65,7 @@ const thoughtController = {
     },
 
     removeThought({ params }, res) {
-        Thoughts.findOneAndDelete({ _id: params.id })
+        Thought.findOneAndDelete({ _id: params.id })
         .then(dbThoughts => {
             if (!dbThoughts) {
                 res.status(404).json({ message: 'no thought with that ID found' })
