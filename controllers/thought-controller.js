@@ -18,7 +18,6 @@ const thoughtController = {
             path: 'thoughts',
             select: '-__v'
         })
-        .select('-__v')
         .then(dbThoughts => {
             if(!dbThoughts) {
                 res.status(404).json({ message: 'no thought with that ID found' })
@@ -32,7 +31,7 @@ const thoughtController = {
     createThought({ params, body }, res) {
         Thought.create(body)
             .then(({ _id }) => {
-                return User.findOneandUpdate(
+                return User.findOneAndUpdate(
                     { _id: params.userId},
                     { $push: { thoughts: _id } },
                     { new: true }
@@ -81,15 +80,15 @@ const thoughtController = {
             { _id: params.thoughtId },
             { $push: { reactions: body } },
             { new: true, runValidators: true }
-        )
-        .then(dbThoughts => {
-            if (!dbThoughts) {
-                res.status(404).json({ message: 'no thought with that ID found' })
-                return;
-            }
-            res.json(dbThoughts)
-        })
-        .catch((err) => res.status(400).json(err))
+            )
+            .then(dbThoughts => {
+                if (!dbThoughts) {
+                    res.status(404).json({ message: 'no thought with that ID found' });
+                    return;
+                }
+                res.json(dbThoughts);
+            })
+            .catch(err => res.status(400).json(err));
     },
 
     removeReaction({ params }, res) {
