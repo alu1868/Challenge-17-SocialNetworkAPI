@@ -27,6 +27,7 @@ const userController = {
                 res.status(404).json({ message: 'no user with that ID found'})
                 return;
             }
+            res.json(dbUsers)
         })
         .catch((err) => res.status(400).json(err))
     },
