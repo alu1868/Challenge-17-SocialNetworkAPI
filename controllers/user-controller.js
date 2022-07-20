@@ -55,17 +55,17 @@ const userController = {
     },
 
     deleteUser({ params }, res) {
-        User.findOneAndUpdate(
+        User.findOneAndDelete(
             { _id: params.id }
-        )
-        .then(dbUsers => {
-            if (!dbUsers) {
-                res.status(404).json({ message: 'no user with taht ID found' })
-                return;
-            }
-            res.json(dbUsers)
-        })
-        .catch(err => res.status(400).json(err))
+            )
+            .then(dbUserData => {
+                if (!dbUserData) {
+                    res.status(404).json({ message: 'No user found with this id!' });
+                    return;
+                }
+                res.json(dbUserData);
+            })
+            .catch(err => res.status(400).json(err));
     },
 
     addFriend({ params }, res) {
